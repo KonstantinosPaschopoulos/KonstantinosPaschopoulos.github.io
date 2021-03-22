@@ -1,0 +1,48 @@
+#Row1 {
+    height: 14rem !important;
+    color:#fff;
+    margin-top:15px;
+    border-radius: 0%;
+    border: 0;
+}
+
+#Row2 {
+    color:#fff;
+    height:490px !important;
+    margin-top:15px;
+    border-radius: 0%;
+    border: 0;
+}
+
+.card {
+    border-radius: 0%;
+    border: 0;
+}
+
+.card-header {
+    background-color: #004494;
+    color: white;
+    font-size: 20px;
+    padding: 0.5rem;
+    padding-left: 1rem;
+}
+
+.card-body {
+    background-color: #D9E3EF;
+}
+
+.card-title {
+    color: #004494;
+}
+
+.nr_projects_script {
+    margin-left: 33px;
+}
+
+.eu_contribution {
+    margin-left: 33px;
+}
+
+.distribution_eu_contribution {
+    margin-left: 20px;
+}

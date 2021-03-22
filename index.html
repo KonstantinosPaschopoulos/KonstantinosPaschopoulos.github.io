@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1920, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v6.js" defer></script>
+    <script src="https://d3js.org/d3-dsv.v1.min.js" defer></script>
+    <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
+    <script src="https://d3js.org/d3-collection.v1.min.js" defer></script>
+    <script src="https://d3js.org/d3-array.v2.min.js" defer></script>
+    <script src="https://d3js.org/d3-time.v2.min.js" defer></script>
+
+    <!-- Custom data viz scripts -->
+    <script src="./DATA_VIZ/JS/RM_number_of_projects.js" defer></script>
+    <script src="./DATA_VIZ/JS/RM_eu_contribution.js" defer></script>
+    <script src="./DATA_VIZ/JS/RM_distribution_of_eu_contribution.js" defer></script>
+    <script src="./DATA_VIZ/JS/RM_countries_transport_mode_funding.js" defer></script>
+
+    <title>Data Viz Wiz</title>
+</head>
+<body>
+
+<!-- Nav Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">TRIMIS Data Viz</a>
+
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html">Roadmap (Data at a Glance)</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="cp.html">Country Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Dashboard</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+        By Konstantinos Paschopoulos
+    </span>
+  </div>
+</nav>
+
+<!-- CAT Banner -->
+<img src="./PICS/CAT_banner.PNG" class="img-fluid" alt="Responsive image">
+
+<!-- Title Text -->
+<div class="container-fluid pl-5 pr-5 pt-4">
+    <div class="row pr-5 pl-5">
+        <div class="col-sm-12 p-0">
+            <!-- <div class="card pr-5 pl-5"> -->
+            <div class="card">
+                <div class="card-body" style="background-color: fff !important;">
+                  <h5 class="card-title p-2" style="background-color: #635395; color: fff !important;">Data at-a-glance</h5>
+                  <p class="card-text">The Data at-a-glance section presents the main transport research and innovation indicators based on TRIMIS data. Find out more about the geographical distributions of European Union transport research and innovation funding, discover the organisations involved in transport research activities and the evolution of funding. This page shows the data that relate to the Connected and Automated Transport (CAT) technologies. Further details are available in the full <a class="card-link" href="">TRIMIS Dashboard</a>.</p>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+<!-- Charts -->
+<div class="container-fluid pl-5 pr-5 pb-5"> 
+  <div class="row pr-5 pl-5">
+    <div class="col-sm-4">
+      <div class="card" id="Row1">
+        <div class="card-header rounded-0">
+            NUMBER OF PROJECTS
+        </div>
+        <div class="card-body rounded-0">
+            <div class="nr_projects_script">
+                <!-- Where the script will append the chart -->
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card" id="Row1">
+          <div class="card-header rounded-0">
+              EU CONTRIBUTION
+          </div>
+          <div class="card-body rounded-0">
+              <div class="eu_contribution">
+                  <!-- Where the script will append the chart -->
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card" id="Row1">
+          <div class="card-header rounded-0">
+              DISTRIBUTION OF EU CONTRIBUTION
+          </div>
+          <div class="card-body rounded-0">
+              <div class="distribution_eu_contribution">
+                  <!-- Where the script will append the chart -->
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="row pr-5 pl-5 pt-3">
+    <div class="col-6">
+        <div class="card" id="Row2">
+          <div class="card-header rounded-0">
+              TRANSPORT-RELATED RESEARCH AND INNOVATION DAILY FUNDING
+          </div>
+          <div class="card-body rounded-0">
+              <h6 class="card-title float-right">BY TRANSPORT MODE</h6>
+              <div class="daily">
+                  <!-- Where the script will append the chart -->
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-6">
+      <div class="card" id="Row2">
+        <div class="card-header rounded-0">
+            TRANSPORT-RELATED RESEARCH AND INNOVATION FUNDING
+        </div>
+        <div class="card-body rounded-0">
+            <h6 class="card-title float-right">BY COUNTRY AND TRANSPORT MODE</h6>
+            <div class="countries">
+                <!-- Where the script will append the chart -->
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer pb-2">
+    <div class="container">
+        <span class="text-muted">
+            Credit goes to the <a href="https://trimis.ec.europa.eu/" class="card-link">TRIMIS</a> project of the European Commission
+        </span>
+    </div>
+</div>
+    
+</body>
+</html>
+
+<script type="text/javascript" src="index.js"></script>

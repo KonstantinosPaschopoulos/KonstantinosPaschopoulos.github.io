@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1920, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="cp.css">
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v6.js" defer></script>
+    <script src="https://d3js.org/d3-dsv.v1.min.js" defer></script>
+    <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
+    <script src="https://d3js.org/d3-collection.v1.min.js" defer></script>
+    <script src="https://d3js.org/d3-array.v2.min.js" defer></script>
+    <script src="https://d3js.org/d3-time.v2.min.js" defer></script>
+
+    <!-- Custom data viz scripts -->
+    <script src="./DATA_VIZ/JS/CP_benefiaries.js" defer></script>
+    <script src="./DATA_VIZ/JS/CP_distribution_eu_funding.js" defer></script>
+    <script src="./DATA_VIZ/JS/CP_distribution_rni_projects.js" defer></script>
+    <script src="./DATA_VIZ/JS/CP_evolution_daily_funding.js" defer></script>
+    <script src="./DATA_VIZ/JS/CP_nr_projects_funding_origin.js" defer></script>
+    <script src="./DATA_VIZ/JS/CP_rni_projects.js" defer></script>
+    <script src="./DATA_VIZ/JS/CP_rni_stria_roadmap.js" defer></script>
+
+    <title>Data Viz Wiz</title>
+</head>
+<body>
+
+<!-- Nav Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">TRIMIS Data Viz</a>
+
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Roadmap (Data at a Glance)</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="cp.html">Country Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Dashboard</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+        By Konstantinos Paschopoulos
+    </span>
+  </div>
+</nav>
+
+<!-- Austria Banner -->
+<img src="./PICS/Austria_banner.PNG" class="img-fluid" alt="Responsive image">
+
+<!-- Title Text -->
+<div class="container-fluid pl-5 pr-5 pt-4">
+    <div class="row pr-5 pl-5">
+        <div class="col-sm-12 p-0">
+            <!-- <div class="card pr-5 pl-5"> -->
+            <div class="card">
+                <div class="card-body" style="background-color: fff !important;">
+                  <h4 class="card-title" style="color: #004494 !important;">Austria Overview</h4>
+                  <p class="card-text">The Austrian Capital is Vienna, and the official language is German. Austria has been an EU member country since 1 January 1995. There are 8,9 million inhabitants in Austria, distributed over 83,8 thousand km2. The Austrian GDP per inhabitant equals 44,8 thousand Euro in 2019. This page visualizes some of the main research and innovation transport related data about Austria.</p>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+<!-- Charts -->
+<div class="container-fluid pl-5 pr-5 pb-5">
+  <!-- First Row -->
+  <div class="row pr-5 pl-5 pt-3">
+    <div class="col-6">
+        <div class="card" id="Row2">
+          <div class="card-header rounded-0 text-center">
+              R&I PROJECTS
+          </div>
+          <div class="card-body rounded-0">
+              <h6 class="card-title text-center">BY STRIA ROADMAP AND FUNDING SOURCE<br><b>with</b> and <b>without</b> overlap with other roadmaps</h6>
+              <div class="rni">
+                  <!-- Where the script will append the chart -->
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-6">
+      <div class="card" id="Row2">
+        <div class="card-header rounded-0 text-center">
+            R&I PROJECTS BY STRIA ROADMAP
+        </div>
+        <div class="card-body rounded-0">
+            <div class="rni_stria">
+                <!-- Where the script will append the chart -->
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- First Row -->
+  <div class="row pr-5 pl-5 pt-3">
+    <div class="col-6">
+        <div class="card" id="Row2">
+          <div class="card-header rounded-0 text-center">
+              EVOLUTION OF DAILY FUNDING BY MODE (EUR) 
+          </div>
+          <div class="card-body rounded-0">
+              <div class="daily">
+                  <!-- Where the script will append the chart -->
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-6">
+      <div class="card" id="Row2">
+        <div class="card-header rounded-0 text-center">
+            TOP 5 BENEFICIARIES            
+        </div>
+        <div class="card-body rounded-0">
+            <div class="beneficiaries">
+                <!-- Where the script will append the chart -->
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Third Row -->
+  <div class="row pr-5 pl-5">
+    <div class="col-sm-4">
+      <div class="card" id="Row1">
+        <div class="card-header rounded-0 text-center" style="font-size: 16px !important;">
+            DISTRIBUTION OF R&I PROJECTS BY TRANSPORT MODE
+        </div>
+        <div class="card-body rounded-0">
+            <div class="nr_projects">
+                <!-- Where the script will append the chart -->
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card" id="Row1">
+          <div class="card-header rounded-0 text-center" style="font-size: 16px !important;">
+              NUMBER OF PROJECTS BY FUNDING ORIGIN
+          </div>
+          <div class="card-body rounded-0">
+              <div class="origin">
+                  <!-- Where the script will append the chart -->
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card" id="Row1">
+          <div class="card-header rounded-0 text-center" style="font-size: 16px !important;">
+              DISTRIBUTION OF EU FUNDING BY TRANSPORT MODE
+          </div>
+          <div class="card-body rounded-0">
+              <div class="eu_funding">
+                  <!-- Where the script will append the chart -->
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="footer pb-2">
+  <div class="container">
+      <span class="text-muted">
+          Credit goes to the <a href="https://trimis.ec.europa.eu/" class="card-link">TRIMIS</a> project of the European Commission
+      </span>
+  </div>
+</div>
+    
+</body>
+</html>
+
+<script type="text/javascript" src="index.js"></script>
