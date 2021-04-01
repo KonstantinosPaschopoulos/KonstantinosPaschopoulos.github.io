@@ -1,0 +1,102 @@
+a:focus {
+  outline: none;
+}
+.content {
+  margin: 30px;
+}
+.clearfix:after {
+  content: '.';
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* Abas */
+.tabs-content {
+  background: #9E8CBB;
+  font-family: sans-serif;
+}
+
+/* Menu das abas */
+.tabs-menu {
+  background: #9E8CBB;
+}
+.tabs-menu ul {
+   list-style: none;
+}
+.tabs-menu ul li {
+  float: left;
+}
+.tabs-menu ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+.tabs-menu ul li a.active-tab-menu {
+  background: #9E8CBB;
+  border-bottom: 5px solid #423763;
+  /* color: #000; */
+}
+
+/* Conteúdo das abas */
+.tabs {
+  display: none;
+  padding: 30px;
+}
+.first-tab {
+  display: block;
+}
+
+#Row1 {
+  height: 14rem !important;
+  color:#fff;
+  margin-top:15px;
+  border-radius: 0%;
+  border: 0;
+}
+
+#Row2 {
+  color:#fff;
+  height:490px !important;
+  margin-top:15px;
+  border-radius: 0%;
+  border: 0;
+}
+
+.card {
+  border-radius: 0%;
+  border: 0;
+}
+
+.card-header {
+  background-color: #635395;
+  color: white;
+  font-size: 16px;
+  padding: 0.5rem;
+  padding-left: 1rem;
+}
+
+.card-body {
+  /* background-color: #D3CDE0; */
+}
+
+.card-title {
+  color: #635395;
+}
+
+.nr_projects_script {
+  margin-left: 33px;
+}
+
+.eu_contribution {
+  margin-left: 33px;
+}
+
+.distribution_eu_contribution {
+  margin-left: 20px;
+}

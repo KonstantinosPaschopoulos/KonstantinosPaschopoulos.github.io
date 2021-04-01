@@ -27,9 +27,9 @@ d3.csv("../DATA_VIZ/TEST_CSV/df_3_2.csv", function (d) {
     };
 })
 .then(function (data) {
-    var height = 500;
+    var height = 450;
     var width = 600;
-    var margin = ({ top: 50, right: 50, bottom: 50, left: 50 });
+    var margin = ({ top: 10, right: 50, bottom: 50, left: 50 });
 
     // Hardcoding the values for now
     var EU_avg = 9.813747;
@@ -39,7 +39,7 @@ d3.csv("../DATA_VIZ/TEST_CSV/df_3_2.csv", function (d) {
     data.sort((a, b) => d3.ascending(a.ratio_2019, b.ratio_2019));
     
     // Create the SVG object
-    const svg = d3.select("div.distribution_eu_contribution")
+    const svg = d3.select("div.cleveland")
         .append("svg")
         .attr("width", width)
         .attr("height", height);

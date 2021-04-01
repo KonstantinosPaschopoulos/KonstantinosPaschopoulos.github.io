@@ -19,8 +19,7 @@ var BrowserText = (function () {
     };
 })();
 
-// d3.csv("./TEST_CSV/df_3_1.csv", function (d) {
-d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_3_1.csv", function (d) {
+d3.csv("../DATA_VIZ/TEST_CSV/df_3_1.csv", function (d) {
     return {
         id: d.id,
         year: +d.year,
@@ -30,9 +29,9 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_3_1.csv", function 
     };
 })
 .then(function (data) {
-    var height = 500;
+    var height = 450;
     var width = 600;
-    var margin = ({ top: 50, right: 50, bottom: 50, left: 50 });
+    var margin = ({ top: 10, right: 50, bottom: 50, left: 50 });
 
     var EU_avg = 9.813747;  // Hardcoded for now
 
@@ -40,7 +39,7 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_3_1.csv", function 
     data.sort((a, b) => d3.ascending(a.ratio, b.ratio));
     
     // Create the SVG object
-    const svg = d3.select("div.ecl-col-sm-12")
+    const svg = d3.select("div.lollipop")
         .append("svg")
         .attr("width", width)
         .attr("height", height);

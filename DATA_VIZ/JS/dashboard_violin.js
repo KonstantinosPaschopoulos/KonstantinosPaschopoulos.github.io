@@ -1,5 +1,4 @@
-// d3.csv("./TEST_CSV/df_5_1.csv", function (d) {
-d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_5_1.csv", function (d) {
+d3.csv("../DATA_VIZ/TEST_CSV/df_5_1.csv", function (d) {
     return {
         fund_scheme: d.fund_scheme,
         field_eu_contribution: +d.field_eu_contribution
@@ -7,11 +6,11 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_5_1.csv", function 
 })
 .then(function (data) {
     var width = 600;
-    var height = 600;
+    var height = 490;
     var margin = ({ top: 50, right: 50, bottom: 50, left: 50 });
 
     // Create the SVG object
-    const svg = d3.select("div.ecl-col-sm-12")
+    const svg = d3.select("div.violin")
         .append("svg")
         .attr("width", width)
         .attr("height", height);

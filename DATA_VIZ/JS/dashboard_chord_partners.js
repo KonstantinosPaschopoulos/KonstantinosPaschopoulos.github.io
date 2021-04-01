@@ -1,5 +1,4 @@
-// d3.csv("./TEST_CSV/df_4_2.csv", function (d) {
-d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_4_2.csv", function (d) {
+d3.csv("../DATA_VIZ/TEST_CSV/df_4_2.csv", function (d) {
     return {
         or: d.or,
         DE: +d.DE,
@@ -104,8 +103,8 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_4_2.csv", function 
         }   
     }
 
-    var width = 600;
-    var height = 600;
+    var width = 530;
+    var height = 530;
 
     // This variable isused to automatically change the colors of the chart
     var RM = "CAT";
@@ -136,7 +135,7 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_4_2.csv", function 
     ]);
 
     // Create the SVG object
-    const svg = d3.select("div.ecl-col-sm-12")
+    const svg = d3.select("div.chord_partners")
         .append("svg")
         .attr("width", width)
         .attr("height", height)
