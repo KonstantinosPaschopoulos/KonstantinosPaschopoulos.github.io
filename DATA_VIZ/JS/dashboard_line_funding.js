@@ -20,8 +20,7 @@ var BrowserText = (function () {
     };
 })();
 
-// d3.csv("./TEST_CSV/df_1_5.csv", function (d) {
-d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_1_5.csv", function (d) {
+d3.csv("../DATA_VIZ/TEST_CSV/df_1_5.csv", function (d) {
     var formatDate = d3.timeParse("%Y-%m-%d");
     if (d.mode === "Air")
         d.mode = "Airborne"
@@ -34,9 +33,9 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_1_5.csv", function 
     };
 })
 .then(function (data) {
-    var width = 600;
-    var height = 500;
-    var margin = ({ top: 50, right: 50, bottom: 120, left: 50 });
+    var width = 540;
+    var height = 400;
+    var margin = ({ top: 0, right: 0, bottom: 50, left: 30 });
 
     var formatDate = d3.timeParse("%Y-%m-%d");
 
@@ -54,7 +53,7 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_1_5.csv", function 
         .range(["../ICONS/Airborne.svg", "../ICONS/MultiModal.svg", "../ICONS/Rail.svg", "../ICONS/Road.svg", "../ICONS/Waterborne.svg"]);
     
     // Create the SVG object
-    const svg = d3.select("div.ecl-col-sm-12")
+    const svg = d3.select("div.line_funding")
         .append("svg")
         .attr("width", width)
         .attr("height", height);
@@ -66,7 +65,8 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_1_5.csv", function 
     var xAxis = g => g
         .attr("transform", `translate(0,${height - margin.bottom})`)
         .call(d3.axisBottom(x).ticks(width / 80).tickSize(0).tickPadding(10))
-        .style("font-size", 8);
+        .style("font-size", 8)
+        .style("color", "black");
 
     // Creating the Y-Axis
     var y = d3.scaleLinear()
@@ -75,7 +75,8 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_1_5.csv", function 
     var yAxis = g => g
         .attr("transform", `translate(${margin.left},0)`)
         .call(d3.axisLeft(y).ticks(4).tickSize(0).tickPadding(5).tickFormat(x => (x / 1e3) + "M€"))
-        .style("font-size", 8);
+        .style("font-size", 8)
+        .style("color", "black");
 
     // Adding the grids for the y and x axis
     var yAxisGrid = g => g
@@ -84,7 +85,8 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_1_5.csv", function 
         .call(g => g.select(".domain")
              .remove())
          .call(g => g.selectAll(".tick line")
-             .attr("stroke-opacity", 0.15))
+             .attr("stroke-opacity", 0.15)
+             .style("color", "black"))
     svg.append("g")
         .call(yAxisGrid);
 
@@ -95,7 +97,8 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_1_5.csv", function 
              .remove())
          .call(g => g.selectAll(".tick line")
              .attr("stroke-dasharray", "2.5")
-             .attr("stroke-opacity", 0.15))
+             .attr("stroke-opacity", 0.15)
+             .style("color", "black"))
     svg.append("g")
         .call(xAxisGrid);
 
@@ -137,7 +140,7 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_1_5.csv", function 
         .attr("height", 20)
         .attr("y", height - margin.bottom/2)
         .attr("x", function (d, i) {
-            return width - margin.right - d3.sum(color.domain().reverse().slice(0, i + 1), d => BrowserText.getWidth(d, 6, 'sans-serif')) - 25*(i+1)
+            return width - margin.right - d3.sum(color.domain().reverse().slice(0, i + 1), d => BrowserText.getWidth(d, 8, 'sans-serif')) - 25*(i+1)
         })
     
     // Creating the legend text
@@ -149,21 +152,21 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_1_5.csv", function 
         .enter()
         .append("text")
         .text(d => d)
-        .attr("font-size", 6)
+        .attr("font-size", 8)
         .attr("dominant-baseline", "central")
         .attr("fill", roadmap_colors(RM))
         .attr("y", height - margin.bottom/2 + 20/2)
         .attr("x", function (d, i) {
-            return width - margin.right - d3.sum(color.domain().reverse().slice(0, i + 1), d => BrowserText.getWidth(d, 6, 'sans-serif')) - 25*(i+1) + 20
+            return width - margin.right - d3.sum(color.domain().reverse().slice(0, i + 1), d => BrowserText.getWidth(d, 8, 'sans-serif')) - 25*(i+1) + 20
         })
     svg.append("g")
         .append("text")
-        .attr("font-size", 6)
+        .attr("font-size", 8)
         .attr("font-family", "sans-serif")
         .attr("dominant-baseline", "central")
         .attr("fill", roadmap_colors(RM))
         .text("TRANSPORT MODES:")
         .attr("y", height - margin.bottom/2 + 20/2)
-        .attr("x", width - margin.right - d3.sum(color.domain(), d => BrowserText.getWidth(d, 6, 'sans-serif')) - 25 * (color.domain().length + 1) - BrowserText.getWidth("TRANSPORT MODES:", 6, 'sans-serif')
+        .attr("x", width - margin.right - d3.sum(color.domain(), d => BrowserText.getWidth(d, 8, 'sans-serif')) - 25 * (color.domain().length + 1) - BrowserText.getWidth("TRANSPORT MODES:", 8, 'sans-serif')
             )
 });

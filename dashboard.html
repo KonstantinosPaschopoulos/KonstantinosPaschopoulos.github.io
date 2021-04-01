@@ -35,7 +35,11 @@
     <script src="./DATA_VIZ/JS/dashboard_stacked_countries.js" defer></script>
     <script src="./DATA_VIZ/JS/dashboard_dotted_funding.js" defer></script>
     <script src="./DATA_VIZ/JS/dashboard_dotted_number.js" defer></script>
-    <script src="./DATA_VIZ/JS/CP_rni_stria_roadmap.js" defer></script>
+    <script src="./DATA_VIZ/JS/dashboard_line_funding.js" defer></script>
+    <script src="./DATA_VIZ/JS/dashboard_line_number.js" defer></script>
+    <script src="./DATA_VIZ/JS/dashboard_number_of_projects.js" defer></script>
+    <script src="./DATA_VIZ/JS/dashboard_eu_contribution.js" defer></script>
+    <script src="./DATA_VIZ/JS/dashboard_distribution_of_eu_contribution.js" defer></script>
 
     <title>TRIMIS Data Viz</title>
 </head>
@@ -92,18 +96,55 @@
       </div> <!-- tabs-menu -->
       
       <div class="tab1 tabs first-tab">
-        <div class="contain-fliud">
+        <div class="container-fluid"> 
           <h3 class="pl-5" style="color: white; font-weight: bold;">Connected and automated transport (CAT)</h3>
-          <h3 class="pl-5" style="color: white; font-weight: bold;">Roadmap overview</h3>
+          <h3 class="pl-5" style="color: white; font-weight: bold;">EU Member States participation index</h3>
+          <div class="row pr-5 pl-5 pt-3">
+            <div class="col-sm-4">
+              <div class="card" id="Row1">
+                <div class="card-header rounded-0">
+                    NUMBER OF PROJECTS
+                </div>
+                <div class="card-body rounded-0" style="background-color: #D3CDE0 !important;">
+                    <div class="nr_projects_script" style="margin-top: -10px; margin-left: 43px;">
+                        <!-- Where the script will append the chart -->
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" id="Row1">
+                  <div class="card-header rounded-0">
+                      EU CONTRIBUTION
+                  </div>
+                  <div class="card-body rounded-0" style="background-color: #D3CDE0 !important;">
+                      <div class="eu_contribution" style="margin-left: 43px; margin-top: -10px">
+                          <!-- Where the script will append the chart -->
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card" id="Row1">
+                  <div class="card-header rounded-0">
+                      DISTRIBUTION OF EU CONTRIBUTION
+                  </div>
+                  <div class="card-body rounded-0" style="background-color: #D3CDE0 !important;">
+                      <div class="distribution_eu_contribution" style="margin-left: -8px;">
+                          <!-- Where the script will append the chart -->
+                      </div>
+                  </div>
+                </div>
+              </div>
+          </div>
           <div class="row pr-5 pl-5 pt-3">
             <div class="col-6">
                 <div class="card" id="Row2">
-                  <div class="card-header rounded-0 text-center">
-                      R&I PROJECTS
+                  <div class="card-header rounded-0">
+                    AVERAGE NUMBER OF R&I PROJECTS
                   </div>
-                  <div class="card-body rounded-0">
-                      <h6 class="card-title text-center">BY STRIA ROADMAP AND FUNDING SOURCE<br><b>with</b> and <b>without</b> overlap with other roadmaps</h6>
-                      <div class="rni">
+                  <div class="card-body rounded-0" style="background-color: #D3CDE0 !important;">
+                      <div class="line_number">
                           <!-- Where the script will append the chart -->
                       </div>
                   </div>
@@ -111,23 +152,22 @@
             </div>
             <div class="col-6">
               <div class="card" id="Row2">
-                <div class="card-header rounded-0 text-center">
-                    R&I PROJECTS BY STRIA ROADMAP
+                <div class="card-header rounded-0">
+                  AVERAGE DAILY FUNDING OF R&I PROJECTS
                 </div>
-                <div class="card-body rounded-0">
-                    <div class="rni_stria">
+                <div class="card-body rounded-0" style="background-color: #D3CDE0 !important;">
+                    <div class="line_funding">
                         <!-- Where the script will append the chart -->
                     </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div> <!-- .tab1 -->
       
       <div class="tab2 tabs">
-        <div class="contain-fliud">
+        <div class="container-fluid">
           <h3 class="pl-5" style="color: white; font-weight: bold;">Connected and automated transport (CAT)</h3>
           <h3 class="pl-5" style="color: white; font-weight: bold;">EU Member States participation index</h3>
           <div class="row pr-5 pl-5 pt-3">
@@ -160,7 +200,7 @@
       </div> <!-- .tab2 -->
       
       <div class="tab3 tabs">
-        <div class="contain-fliud">
+        <div class="container-fluid">
           <h3 class="pl-5" style="color: white; font-weight: bold;">Connected and automated transport (CAT)</h3>
           <h3 class="pl-5" style="color: white; font-weight: bold;">EU Member States R&I collaboration</h3>
           <div class="row pr-5 pl-5 pt-3">
@@ -193,7 +233,7 @@
       </div> <!-- .tab3 -->
 
       <div class="tab4 tabs">
-        <div class="contain-fliud">
+        <div class="container-fluid">
           <h3 class="pl-5" style="color: white; font-weight: bold;">Connected and automated transport (CAT)</h3>
           <h3 class="pl-5" style="color: white; font-weight: bold;">Source of funding</h3>
           <div class="row pr-5 pl-5 pt-3">
@@ -226,7 +266,7 @@
       </div> <!-- .tab4 -->
 
       <div class="tab5 tabs">
-        <div class="contain-fliud">
+        <div class="container-fluid">
           <h3 class="pl-5" style="color: white; font-weight: bold;">Connected and automated transport (CAT)</h3>
           <h3 class="pl-5" style="color: white; font-weight: bold;">Overlap with other roadmaps</h3>
           <div class="row pr-5 pl-5 pt-3">
