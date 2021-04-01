@@ -33,6 +33,8 @@
     <script src="./DATA_VIZ/JS/dashboard_chord_rni.js" defer></script>
     <script src="./DATA_VIZ/JS/dashboard_violin.js" defer></script>
     <script src="./DATA_VIZ/JS/dashboard_stacked_countries.js" defer></script>
+    <script src="./DATA_VIZ/JS/dashboard_dotted_funding.js" defer></script>
+    <script src="./DATA_VIZ/JS/dashboard_dotted_number.js" defer></script>
     <script src="./DATA_VIZ/JS/CP_rni_stria_roadmap.js" defer></script>
 
     <title>TRIMIS Data Viz</title>
@@ -224,6 +226,36 @@
       </div> <!-- .tab4 -->
 
       <div class="tab5 tabs">
+        <div class="contain-fliud">
+          <h3 class="pl-5" style="color: white; font-weight: bold;">Connected and automated transport (CAT)</h3>
+          <h3 class="pl-5" style="color: white; font-weight: bold;">Overlap with other roadmaps</h3>
+          <div class="row pr-5 pl-5 pt-3">
+            <div class="col-6">
+                <div class="card" id="Row2">
+                  <div class="card-header rounded-0">
+                    DAILY NUMBER OF R&I PROJECTS AND OVERLAP WITH OTHER STRIA ROADMAPS
+                  </div>
+                  <div class="card-body rounded-0" style="background-color: #D3CDE0 !important;">
+                      <div class="dotted_number">
+                          <!-- Where the script will append the chart -->
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-6">
+              <div class="card" id="Row2">
+                <div class="card-header rounded-0">
+                  DAILY AVERAGE FUNDING OF R&I PROJECTS AND OVERLAP WITH OTHER STRIA ROADMAPS
+                </div>
+                <div class="card-body rounded-0" style="background-color: #D3CDE0 !important;">
+                    <div class="dotted_funding">
+                        <!-- Where the script will append the chart -->
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div> <!-- .tab5 -->
       
     </div> <!-- .tabs -->

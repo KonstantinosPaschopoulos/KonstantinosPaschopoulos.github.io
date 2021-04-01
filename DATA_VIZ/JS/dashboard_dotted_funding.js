@@ -1,6 +1,5 @@
 // The code of the two dashboard dotted scripts is the exact same, the only thing that changes is the CSV file that is used for input
-// d3.csv("./TEST_CSV/df_6_2.csv", function (d) {
-d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_6_2.csv", function (d) {
+d3.csv("../DATA_VIZ/TEST_CSV/df_6_2.csv", function (d) {
     var formatDate = d3.timeParse("%Y-%m-%d");
     return {
         fund_date: formatDate(d.fund_date),
@@ -10,8 +9,8 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_6_2.csv", function 
 })
 .then(function (data) {
     var width = 600;
-    var height = 444;
-    var margin = ({ top: 50, right: 50, bottom: 120, left: 50 });
+    var height = 490;
+    var margin = ({ top: 0, right: 50, bottom: 120, left: 35 });
 
     var formatDate = d3.timeParse("%Y-%m-%d");
 
@@ -22,7 +21,7 @@ d3.csv("http://demotrimis.com/web/sites/default/files/csv/df_6_2.csv", function 
         .range(["#7e66a4", "#e8ce70", "#91a957", "#e69c58", "#6991C6", "#ca6b7e", "#45868c"])
 
     // Create the SVG object
-    const svg = d3.select("div.ecl-col-sm-12")
+    const svg = d3.select("div.dotted_funding")
         .append("svg")
         .attr("width", width)
         .attr("height", height);
