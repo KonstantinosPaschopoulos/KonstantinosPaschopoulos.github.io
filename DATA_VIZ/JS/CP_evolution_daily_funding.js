@@ -116,7 +116,7 @@ d3.csv("../DATA_VIZ/TEST_CSV/AT_cp_04.csv", function (d) {
     var colour = d3.scaleOrdinal().domain(["AIRBORNE", "MULTIMODAL", "RAIL", "ROAD", "WATERBORNE"])
         .range(["#40679B", "#AB823B", "#704539", "#4D4D4F", "#2F6E6A"]);
     var icons = d3.scaleOrdinal().domain(["AIRBORNE", "MULTIMODAL", "RAIL", "ROAD", "WATERBORNE"])
-        .range(["http://demotrimis.com/web/sites/default/files/icons/Airborne - Round - on color.svg", "http://demotrimis.com/web/sites/default/files/icons/MultiModal - Round - on color.svg", "http://demotrimis.com/web/sites/default/files/icons/Rail - Round - on color.svg", "http://demotrimis.com/web/sites/default/files/icons/Road - Round - on color.svg", "http://demotrimis.com/web/sites/default/files/icons/Waterborne - Round - on color.svg"]);
+        .range(["../ICONS/Airborne.svg", "../ICONS/MultiModal.svg", "../ICONS/Rail.svg", "../ICONS/Road.svg", "../ICONS/Waterborne.svg"]);
     
     // Create the SVG object
     const svg = d3.select("div.daily")

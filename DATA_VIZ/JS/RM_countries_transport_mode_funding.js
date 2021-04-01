@@ -80,7 +80,7 @@ d3.csv("../DATA_VIZ/TEST_CSV/df_2_2.csv", function (d) {
     ]);
 
     var icons = d3.scaleOrdinal().domain(["AIRBORNE", "MULTIMODAL", "RAIL", "ROAD", "WATERBORNE"])
-        .range(["http://demotrimis.com/web/sites/default/files/icons/Airborne - Round - on color.svg", "http://demotrimis.com/web/sites/default/files/icons/MultiModal - Round - on color.svg", "http://demotrimis.com/web/sites/default/files/icons/Rail - Round - on color.svg", "http://demotrimis.com/web/sites/default/files/icons/Road - Round - on color.svg", "http://demotrimis.com/web/sites/default/files/icons/Waterborne - Round - on color.svg"]);
+        .range(["../ICONS/Airborne.svg", "../ICONS/MultiModal.svg", "../ICONS/Rail.svg", "../ICONS/Road.svg", "../ICONS/Waterborne.svg"]);
     
     // To be able to stack the data, they must all have the same length
     var fixedData = assignDefaultValues(data);

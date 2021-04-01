@@ -49,7 +49,7 @@ d3.csv("../DATA_VIZ/TEST_CSV/AT_cp_03.csv", function (d) {
     var colour = d3.scaleOrdinal().domain(["AIRBORNE", "RAIL", "ROAD", "WATERBORNE", "MULTIMODAL"])
         .range(["#40679B", "#704539", "#4D4D4F", "#2F6E6A", "#AB823B"]);
     var icons = d3.scaleOrdinal().domain(["AIRBORNE", "MULTIMODAL", "RAIL", "ROAD", "WATERBORNE"])
-        .range(["http://demotrimis.com/web/sites/default/files/icons/Airborne - Round - on color.svg", "http://demotrimis.com/web/sites/default/files/icons/MultiModal - Round - on color.svg", "http://demotrimis.com/web/sites/default/files/icons/Rail - Round - on color.svg", "http://demotrimis.com/web/sites/default/files/icons/Road - Round - on color.svg", "http://demotrimis.com/web/sites/default/files/icons/Waterborne - Round - on color.svg"]);
+        .range(["../ICONS/Airborne.svg", "../ICONS/MultiModal.svg", "../ICONS/Rail.svg", "../ICONS/Road.svg", "../ICONS/Waterborne.svg"]);
     var x = d3.scaleLinear([0, 100], [margin.left, width - margin.right]);
 
     // Checking if the first and last labels overflow outside of the dimension of the SVG
