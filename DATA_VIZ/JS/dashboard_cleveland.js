@@ -224,8 +224,9 @@ d3.csv("../DATA_VIZ/TEST_CSV/df_3_2.csv", function (d) {
                 tooltipRect.transition().duration(200).style('opacity', '0');    
                 tooltipText.transition().duration(200).style('opacity', '0'); 
 
-                d3.select("#" + dot.id).transition()
-                    .duration(200).attr("stroke-width", 2) 
+                // Line animation
+                svg.select("#" + dot.id).transition()
+                    .duration(200).attr("stroke-width", 2)
 
                 d3.select(this)
                     .transition()
